@@ -1,0 +1,64 @@
+{
+  "compilerOptions": {
+    "forceConsistentCasingInFileNames": true,
+    "strict": true,
+    "target": "ESNext",
+    "module": "ESNext",
+    "moduleResolution": "Node",
+    "allowJs": true,
+    "resolveJsonModule": true,
+    "jsx": "preserve",
+    "jsxFactory": "h",
+    "jsxFragmentFactory": "Fragment",
+    "paths": {
+      "#imports": [
+        "/Applications/XAMPP/xamppfiles/htdocs/crud-nuxt/.nuxt/types/nitro-imports"
+      ],
+      "#paths": [
+        "/Applications/XAMPP/xamppfiles/htdocs/crud-nuxt/node_modules/nuxt/dist/core/runtime/nitro/paths"
+      ],
+      "~": [
+        "/Applications/XAMPP/xamppfiles/htdocs/crud-nuxt"
+      ],
+      "~/*": [
+        "/Applications/XAMPP/xamppfiles/htdocs/crud-nuxt/*"
+      ],
+      "@": [
+        "/Applications/XAMPP/xamppfiles/htdocs/crud-nuxt"
+      ],
+      "@/*": [
+        "/Applications/XAMPP/xamppfiles/htdocs/crud-nuxt/*"
+      ],
+      "~~": [
+        "/Applications/XAMPP/xamppfiles/htdocs/crud-nuxt"
+      ],
+      "~~/*": [
+        "/Applications/XAMPP/xamppfiles/htdocs/crud-nuxt/*"
+      ],
+      "@@": [
+        "/Applications/XAMPP/xamppfiles/htdocs/crud-nuxt"
+      ],
+      "@@/*": [
+        "/Applications/XAMPP/xamppfiles/htdocs/crud-nuxt/*"
+      ],
+      "assets": [
+        "/Applications/XAMPP/xamppfiles/htdocs/crud-nuxt/assets"
+      ],
+      "assets/*": [
+        "/Applications/XAMPP/xamppfiles/htdocs/crud-nuxt/assets/*"
+      ],
+      "public": [
+        "/Applications/XAMPP/xamppfiles/htdocs/crud-nuxt/public"
+      ],
+      "public/*": [
+        "/Applications/XAMPP/xamppfiles/htdocs/crud-nuxt/public/*"
+      ]
+    }
+  },
+  "include": [
+    "/Applications/XAMPP/xamppfiles/htdocs/crud-nuxt/.nuxt/types/nitro-nuxt.d.ts",
+    "./types/nitro.d.ts",
+    "../**/*",
+    "../server/**/*"
+  ]
+}
