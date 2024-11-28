@@ -1,9 +1,9 @@
 {
-  "_hash": "ycfPDenN9q",
+  "_hash": "G8rG7kIh61",
   "project": {
-    "rootDir": "/Applications/XAMPP/xamppfiles/htdocs/crud-nuxt"
+    "rootDir": "/Applications/XAMPP/xamppfiles/htdocs/madox"
   },
   "versions": {
-    "nuxt": "3.6.2"
+    "nuxt": "3.14.159"
   }
 }

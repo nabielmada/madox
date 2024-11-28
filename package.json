@@ -1,5 +1,5 @@
 {
-  "name": "nuxt-light-started",
+  "name": "MadoX",
   "private": true,
   "scripts": {
     "build": "nuxt build",
@@ -8,10 +8,18 @@
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare"
   },
+  "overrides": {
+    "vue": "latest"
+  },
   "devDependencies": {
     "@nuxt/devtools": "latest",
+    "@nuxtjs/color-mode": "^3.5.2",
+    "@pinia/nuxt": "^0.7.0",
     "@types/node": "^18.16.19",
-    "nuxt": "^3.6.2",
+    "nuxt": "^3.14.159",
     "sass": "^1.63.6"
+  },
+  "dependencies": {
+    "pinia": "^2.2.6"
   }
 }

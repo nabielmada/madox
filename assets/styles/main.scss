@@ -1,0 +1,56 @@
+@use 'text';
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #020420;
+    color: white;
+}
+
+body #home {
+    font-family: 'Poppins', sans-serif;
+    background-color: #020420;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+#store-number{
+    width: 500px;
+    padding: 12px;
+    background-color: #181925;
+    color: white;
+    border-color: #020420;
+}
+
+.text-title{
+    color: #1FEF3E
+}
+.text-desc{
+    font-size: small;
+    color: gray;
+}
+
+.text-win{
+    color: chartreuse;
+}
+
+.text-waiting{
+    color: gold;
+}
+
+.text-lose{
+    color: crimson ;
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    #store-number{
+        width: 100%;
+        padding: 12px;
+        background-color: #181925;
+        color: white;
+        border-color: #020420;
+    }
+}

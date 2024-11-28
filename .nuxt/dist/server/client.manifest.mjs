@@ -1,1 +1,1 @@
-export { default } from "file:///Applications/XAMPP/xamppfiles/htdocs/crud-nuxt/node_modules/@nuxt/vite-builder/dist/runtime/client.manifest.mjs"
+export { default } from "file:///Applications/XAMPP/xamppfiles/htdocs/madox/node_modules/@nuxt/vite-builder/dist/runtime/client.manifest.mjs"

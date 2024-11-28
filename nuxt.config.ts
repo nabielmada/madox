@@ -1,14 +1,22 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   devtools: { enabled: true },
+
   app: {
     head: {
-      title: 'Nuxt Light Started',
+      title: 'MadoX',
       meta: [
-        { charset: 'utf-8' },
-        { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-        { hid: 'description', name: 'description', content: 'Collosal Website' },
-        { name: 'format-detection', content: 'telephone=no' }
+        { name: 'description', content: 'MadoX' },
+        { name: 'format-detection', content: 'telephone=no' },
+        { property: 'og:title', content: 'Madox' },
+        { property: 'og:description', content: 'MadoX' },
+        { property: 'og:type', content: 'website' },
+        { property: 'og:url', content: 'https://madox.com' },
+        { property: 'og:image', content: 'https://madox.com/thumbnail.png' },
+        { name: 'twitter:card', content: 'summary_large_image' },
+        { name: 'twitter:title', content: 'MadoX' },
+        { name: 'twitter:description', content: 'MadoX'},
+        { name: 'twitter:image', content: 'https://madox.com/thumbnail.png' },
       ],
       link: [
         {
@@ -36,4 +44,9 @@ export default defineNuxtConfig({
     }
   },
   css: ['~/assets/styles/main.scss'],
+  modules: ['@nuxtjs/color-mode', '@pinia/nuxt'],
+  pinia: {
+    storesDirs: ['./store/**'],
+  },
+
 })
