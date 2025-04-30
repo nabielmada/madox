@@ -161,23 +161,6 @@ const errorHandler = (async function errorhandler(error, event) {
   return send(event, html);
 });
 
-const script$1 = `
-if (!window.__NUXT_DEVTOOLS_TIME_METRIC__) {
-  Object.defineProperty(window, '__NUXT_DEVTOOLS_TIME_METRIC__', {
-    value: {},
-    enumerable: false,
-    configurable: true,
-  })
-}
-window.__NUXT_DEVTOOLS_TIME_METRIC__.appInit = Date.now()
-`;
-
-const _MeILcbmsyL = (function(nitro) {
-  nitro.hooks.hook("render:html", (htmlContext) => {
-    htmlContext.head.push(`<script>${script$1}<\/script>`);
-  });
-});
-
 const rootDir = "/Applications/XAMPP/xamppfiles/htdocs/madox";
 
 const appHead = {"meta":[{"name":"viewport","content":"width=device-width, initial-scale=1"},{"charset":"utf-8"},{"name":"description","content":"MadoX"},{"name":"format-detection","content":"telephone=no"},{"property":"og:title","content":"Madox"},{"property":"og:description","content":"MadoX"},{"property":"og:type","content":"website"},{"property":"og:url","content":"https://madox.com"},{"property":"og:image","content":"https://madox.com/thumbnail.png"},{"name":"twitter:card","content":"summary_large_image"},{"name":"twitter:title","content":"MadoX"},{"name":"twitter:description","content":"MadoX"},{"name":"twitter:image","content":"https://madox.com/thumbnail.png"}],"link":[{"rel":"icon","type":"image/x-icon","href":"/favicon.ico"},{"rel":"stylesheet","href":"https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"},{"rel":"stylesheet","href":"https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"}],"style":[],"script":[{"src":"https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"},{"src":"https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"}],"noscript":[],"title":"MadoX"};
@@ -275,8 +258,7 @@ const _pAmnCj70jC = (function(nitro) {
 });
 
 const plugins = [
-  _MeILcbmsyL,
-_YtXIg45Ekk,
+  _YtXIg45Ekk,
 _pAmnCj70jC
 ];
 

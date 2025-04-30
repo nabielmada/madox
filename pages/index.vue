@@ -19,15 +19,15 @@
     <div class="mt-4">
     <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
         <input type="radio" class="btn-check" name="btnradio" v-model="mrx1" id="mrx1" autocomplete="off">
-        <label class="btn btn-outline" for="mrx1">MrX1</label>
+        <label class="btn btn-outline-light" for="mrx1">MrX1</label>
 
         <div class="mx-3">
           <input type="radio" class="btn-check" name="btnradio" v-model="mrx2" id="mrx2" autocomplete="off">
-          <label class="btn btn-outline" for="mrx2">MrX2</label>
+          <label class="btn btn-outline-light" for="mrx2">MrX2</label>
         </div>
 
         <input type="radio" class="btn-check" name="btnradio" v-model="mrx3" id="mrx3" autocomplete="off">
-        <label class="btn btn-outline" for="mrx3">MrX3</label>
+        <label class="btn btn-outline-light" for="mrx3">MrX3</label>
       </div>
     </div>
     <div class="mt-4">
@@ -43,14 +43,20 @@
 
   <!-- Modal -->
   <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" v-if="isModalVisible">
-    <div class="modal-dialog modal-dialog-centered modal-lg">
-      <div class="modal-content">
-        <div class="modal-body bg-dark">
+    <div class="modal-dialog modal-dialog-centered modal-lg p-0">
+      <div class="modal-content p-0">
+      <div class="modal-header bg-dark">
+        <h1 class="modal-title fs-6 fw-bold" id="exampleModalToggleLabel">
+          MadoX
+        </h1>
+        <button type="button" class="btn-close bg-white" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+        <div class="modal-body bg-dark p-0">
           <section
             id="outputs"
             class="container d-flex flex-column justify-content-center align-items-center text-center"
           >
-            <div class="card bg-dark w-100">
+            <div class="card bg-dark w-100 border-0">
               <div class="card-body text-white">
                 <div class="d-flex flex-column">
                   <div>
@@ -159,21 +165,11 @@ export default {
       result: [],
       resultWebSatu: [],
       resultWebDua: [],
-      resultJoker: [],
       isGenerate: "N",
       isModalVisible: false,
     };
   },
-  mounted() {
-    // this.handleBeforeUnload();
-  },
   methods: {
-    // handleBeforeUnload() {
-    //     window.addEventListener("beforeunload", function (e) {
-    //       e.preventDefault();
-    //       e.returnValue = "";
-    //   });
-    // },
     generateResult() {
       const store = madoxsStore();
       if (this.mrx1) {
@@ -187,7 +183,6 @@ export default {
       }
         this.result = store.dataResult;
         this.isGenerate = store.isGenerate;
-        this.resultJoker = store.resultJoker
         this.resultWebDua = store.resultWebDua
         this.resultWebSatu = store.resultWebSatu
 

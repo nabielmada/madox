@@ -17,6 +17,14 @@ export const madoxsStore = defineStore("madoxs", {
                 // MRX1
                 const numbers = store_number.split(",").map((num: string) => parseInt(num.trim()));
 
+                //  Ambil Dua Digit Belakang
+                const step0 = numbers.slice(0, -1).map((num: { toString: () => string; }) => {
+                    const strNum = num.toString().padStart(4, '0');
+                    return strNum.slice(2, 4);
+                });
+
+                console.log(step0);
+
                 //  Ambil Dua Digit Depan
                 const step1 = numbers.slice(0, -1).map((num: { toString: () => string; }) => {
                     const strNum = num.toString().padStart(4, '0');
@@ -41,9 +49,19 @@ export const madoxsStore = defineStore("madoxs", {
 
                 // console.log(step3);
 
+                // Ambil Dua Digit Depan dan Dua Digit Belakang
+                const combined = numbers.map((num: { toString: () => string; }) => {
+                    const strNum = num.toString().padStart(4, '0'); // Pastikan panjang string 4 dengan padding
+                    const front = strNum.slice(0, 1); // Dua digit depan
+                    const back = strNum.slice(-1); // Digit paling belakang
+                    return front + back; // Gabungkan
+                });
+
+                console.log(combined);
+
                 // Buat Daftar Angka dari 00 hingga 99 dan Hilangkan yang Sudah Muncul
                 const allNumbers = Array.from({ length: 100 }, (_, i) => i.toString().padStart(2, '0'));
-                const allUsedNumbers = [...step1].map(String);
+                const allUsedNumbers = [...step0, ...step1, ...combined].map(String);
 
                 const remainingNumbers = allNumbers.filter(num => !allUsedNumbers.includes(num));
 
@@ -86,6 +104,14 @@ export const madoxsStore = defineStore("madoxs", {
                 // Mengambil digit depannya
                 const customAS = parseInt(seventhNumber.toString()[0]); 
 
+                //  Ambil Dua Digit Belakang
+                const step0 = numbers.slice(0, -1).map((num: { toString: () => string; }) => {
+                    const strNum = num.toString().padStart(4, '0');
+                    return strNum.slice(2, 4);
+                });
+
+                console.log(step0);
+
                 //  Ambil Dua Digit Depan
                 const step1 = numbers.slice(0, -1).map((num: { toString: () => string; }) => {
                     const strNum = num.toString().padStart(4, '0');
@@ -110,9 +136,19 @@ export const madoxsStore = defineStore("madoxs", {
 
                 // console.log(step3);
 
+                // Ambil Dua Digit Depan dan Dua Digit Belakang
+                const combined = numbers.map((num: { toString: () => string; }) => {
+                    const strNum = num.toString().padStart(4, '0'); // Pastikan panjang string 4 dengan padding
+                    const front = strNum.slice(0, 1); // Dua digit depan
+                    const back = strNum.slice(-1); // Digit paling belakang
+                    return front + back; // Gabungkan
+                });
+
+                console.log(combined);
+
                 // Buat Daftar Angka dari 00 hingga 99 dan Hilangkan yang Sudah Muncul
                 const allNumbers = Array.from({ length: 100 }, (_, i) => i.toString().padStart(2, '0'));
-                const allUsedNumbers = [...step1].map(String);
+                const allUsedNumbers = [...step0, ...step1, ...combined].map(String);
 
                 const remainingNumbers = allNumbers.filter(num => !allUsedNumbers.includes(num));
 
@@ -155,6 +191,14 @@ export const madoxsStore = defineStore("madoxs", {
                 // Mengambil digit depannya
                 const customAS = parseInt(seventhNumber.toString()[0]);
 
+                //  Ambil Dua Digit Belakang
+                const step0 = numbers.slice(0, -1).map((num: { toString: () => string; }) => {
+                    const strNum = num.toString().padStart(4, '0');
+                    return strNum.slice(2, 4);
+                });
+
+                console.log(step0);
+                
                 //  Ambil Dua Digit Depan
                 const step1 = numbers.slice(0, -1).map((num: { toString: () => string; }) => {
                     const strNum = num.toString().padStart(4, '0');
@@ -195,9 +239,19 @@ export const madoxsStore = defineStore("madoxs", {
 
                 // console.log(step3b);
 
+                // Ambil Dua Digit Depan dan Dua Digit Belakang
+                const combined = numbers.map((num: { toString: () => string; }) => {
+                    const strNum = num.toString().padStart(4, '0'); // Pastikan panjang string 4 dengan padding
+                    const front = strNum.slice(0, 1); // Dua digit depan
+                    const back = strNum.slice(-1); // Digit paling belakang
+                    return front + back; // Gabungkan
+                });
+
+                console.log(combined);
+
                 // Buat Daftar Angka dari 00 hingga 99 dan Hilangkan yang Sudah Muncul
                 const allNumbers = Array.from({ length: 100 }, (_, i) => i.toString().padStart(2, '0'));
-                const allUsedNumbers = [...step1].map(String);
+                const allUsedNumbers = [...step0, ...step1, ...combined].map(String);
 
                 const remainingNumbers = allNumbers.filter(num => !allUsedNumbers.includes(num));
 

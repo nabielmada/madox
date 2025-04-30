@@ -87,7 +87,7 @@ export const madoxsStore = defineStore("madoxs", {
 
                 console.log(step2);
 
-                // Ambil digit pertama dari 1 angka pertama
+                // Ambil digit kedua dari 2 angka pertama
                 const step3 = numbers.slice(0, 1).map((num: number) => {
                     const strNum = num.toString().padStart(4, '0');
                     return parseInt(strNum[1]);
